@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    printf("Hello, Mac!\n");
+    printf("Hello, C\n");
     return 0;
 }
