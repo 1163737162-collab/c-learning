@@ -56,3 +56,22 @@ hello
 /weekday
 /wrap-around
 /year
+
+# Additional compiled programs
+/bouncing_ball
+/chicken_rabbit
+/coin_change
+/find_min
+/goldbach_conjecture
+/letter_pyraid
+/longest_palindromic_substring
+/matrix_multiplication
+/perfect_numbers
+/prime_range
+/prime_range_pro
+/remove_duplicate
+/repeated_digit_sum_pro
+/reverse_arry
+/selection_sort
+/string_sort
+/swap_min_max
