@@ -75,3 +75,6 @@ hello
 /selection_sort
 /string_sort
 /swap_min_max
+
+# Compiled programs retained inside date archives
+**/编译产物/
