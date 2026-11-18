@@ -16,6 +16,15 @@
 int main ()
 {
     int arr[10] = {1,2,3,4,5,6,7,8,9,10};
-    int (*P)[10] = &arr;
+    int (*p)[10] = &arr;
+    printf("改变前:%d\n",(*p)[2]);
+    // printf("%d\n",*((*p)+2));
+    *((*p)+2) = 99;
+    printf("改变后:%d\n",(*p)[2]);
+    printf("&p = %p\n",p);
+    printf("&p+1 = %p\n",p+1);
+
+
+
     return 0;
 }

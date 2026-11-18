@@ -7,7 +7,27 @@
 4. 四条输出语句连续执行：逐行记录 cpp 指向哪里、cp 的元素有没有变化，以及预测输出。
 5. 自己输入程序后运行核对。字符串内容不修改，可用 const char * 指向字面量。
 6. 选做：重新初始化数据，将复杂表达式拆成简单步骤，再比较运行结果。
-
+指针数组
 请在下面从头编写代码。
 */
+#include <stdio.h>
+int main()
+{
+    // char *a[] = {"work", "at", "alibaba"};
+    // char **pa = a; // a[] = {char*,char*,char*},a代表首元素的地址，也就是第一个char*的地址
+    // pa++;//表示第二个char*的地址
+    // printf("*pa = %s\n", *pa);//*pa 解逆用就是char*,然后char*又代表"work"中w的地址
+    // printf("*(*pa+1) = %c\n",*(*pa+1));
+    // // 打印的是字符串
+    // // 需要把起始地址传过去
+    // /* **pa = a,a是数组名，代表的是首元素的地址也就是一级指针的地址， */
+    char *c[] = {"ENTER","NEW","POINT","FIRST"};
+    char **cp[] = {c+3,c+2,c+1,c};
+    char ***cpp = cp;
+    printf("**++cpp = %s\n",**++cpp);
+    printf("*--*++cpp+3 = %s\n",*--*++cpp+3);
+    printf("*cpp[-2]+3 = %s\n",*cpp[-2]+3);
+    printf("cpp[-1][-1]+1 = %s\n", cpp[-1][-1]+1); 
 
+    return 0;
+}

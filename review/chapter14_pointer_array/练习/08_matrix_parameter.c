@@ -11,4 +11,34 @@
 
 请在下面从头编写代码。
 */
+#include <stdio.h>
+void print (int (*p)[5],int r, int c);
+void change(int (*P)[5],int r,int c);
 
+int main ()
+{
+   int arr[3][5] = {{1,2,3,4,5},{2,3,4,5,6},{3,4,5,6,7}};
+   printf("修改前:\n");
+   print(arr,3,5);
+   change(arr,3,5);
+   printf("修改后:\n");
+   print(arr,3,5);
+   return 0;
+}
+void print(int (*p)[5],int r,int c)
+{
+
+   for(int i = 0;i<r;i++)
+   {
+      for(int j = 0;j<c;j++)
+      {
+         printf("%-4d",*(*(p+i)+j));
+      }
+      printf("\n");
+   }
+
+}
+void change (int (*p)[5],int r,int c)
+{
+   *(*(p+1)+2) = 99;
+}

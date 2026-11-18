@@ -8,6 +8,35 @@
 5. 将第2个数组改为只有3个元素；记录每行长度后重新遍历，不要越界。
 6. 思考：指针数组和真正二维数组的存储方式有何不同？各行一定相邻吗？
 
-请在下面从头编写代码。
+请在下面从头编写代码。这个是指针数组 意思就是数组里面存放着地址
 */
+#include <stdio.h>
+void print(int *pa[],int r,int c);
+int main ()
+{
+    int a1[] = {1,2,3,4,5};
+    int a2[] = {2,3,4,5,6};
+    int a3[] = {3,4,5,6,7};
+    int *pa[] = {a1,a2,a3};
+    printf("修改前:\n");
+    print(pa,3,3);
+    *(*(pa+1)+2) = 99;
+    printf("修改后:\n");
+    print(pa,3,3);
+
+    
+    return 0;
+}
+void print(int *pa[],int r,int c)
+{
+    for(int i = 0;i<3;i++)
+    {
+        for(int j = 0;j<3;j++)
+        {
+            printf("%-3d",pa[i][j]);//*(*(pa+i)+j)
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
 
