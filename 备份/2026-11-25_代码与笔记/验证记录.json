@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-25",
+  "source_count": 20,
+  "hashes_ok": true,
+  "syntax": [
+    {
+      "file": "指针练习/7-1_最大和最小.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-2_实数排序.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": "/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/7-2_实数排序.c:25:17: warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]\n   25 |                 printf(\"%.2f\",a[i]);\n      |                 ^\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/7-2_实数排序.c:23:13: note: previous statement is here\n   23 |             if(i>0)\n      |             ^\n1 warning generated.\n"
+    },
+    {
+      "file": "指针练习/7-3_字符指针.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-4_找最大的字符串.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-5_输入3个字符串按由小到大顺序输出.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-6_求矩阵每行元素的和.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-12_使用函数删除字符串中的字符.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-13_输出学生成绩.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-14_利用指针返回多个函数值.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/6-1_字符串复制_指针版_对话版本.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/6-2_用指针交换两个主函数变量数值_早期快照.c",
+      "returncode": 1,
+      "expected_early_snapshot_error": true,
+      "diagnostics": "/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/6-2_用指针交换两个主函数变量数值_早期快照.c:3:17: error: use of undeclared identifier 'date1'\n    3 |     int temp = *date1;\n      |                 ^~~~~\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/6-2_用指针交换两个主函数变量数值_早期快照.c:4:6: error: use of undeclared identifier 'date1'\n    4 |     *date1 = *date1;\n      |      ^~~~~\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/6-2_用指针交换两个主函数变量数值_早期快照.c:4:15: error: use of undeclared identifier 'date1'\n    4 |     *date1 = *date1;\n      |               ^~~~~\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/6-2_用指针交换两个主函数变量数值_早期快照.c:1:16: warning: unused parameter 'data1' [-Wunused-parameter]\n    1 | void swap(int *data1,int *date2)\n      |                ^\n1 warning and 3 errors generated.\n"
+    },
+    {
+      "file": "指针练习/6-3_求出二维数组的最大元素及坐标_对话版本.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/6-4_班级最高分最低分和平均分_对话版本.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": "/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/6-4_班级最高分最低分和平均分_对话版本.c:10:16: warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]\n   10 |                if(score[i]<*min)\n      |                ^\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/6-4_班级最高分最低分和平均分_对话版本.c:8:13: note: previous statement is here\n    8 |             if(score[i]>*max)\n      |             ^\n1 warning generated.\n"
+    },
+    {
+      "file": "指针练习/7-8_组织星期信息_对话版本.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-9_在数组中查找指定元素_早期快照.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "指针练习/7-11_使用函数实现字符串复制_对话版本.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": "/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/7-11_使用函数实现字符串复制_对话版本.c:17:17: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]\n   17 |             if(m>strlen(t))\n      |                ~^~~~~~~~~~\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/7-11_使用函数实现字符串复制_对话版本.c:30:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]\n   30 |     while(*s++=*t++)\n      |           ~~~~^~~~~\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/7-11_使用函数实现字符串复制_对话版本.c:30:15: note: place parentheses around the assignment to silence this warning\n   30 |     while(*s++=*t++)\n      |               ^    \n      |           (        )\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/指针练习/7-11_使用函数实现字符串复制_对话版本.c:30:15: note: use '==' to turn this assignment into an equality comparison\n   30 |     while(*s++=*t++)\n      |               ^\n      |               ==\n2 warnings generated.\n"
+    },
+    {
+      "file": "函数测试/6-1_菲波那切数列_循环_高.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "函数测试/6-2_使用函数统计指定数字的个数.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "函数测试/6-3_字符串连接.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": ""
+    },
+    {
+      "file": "旧题备份/6-1_原字符串复制_被替换题目_对话版本.c",
+      "returncode": 0,
+      "expected_early_snapshot_error": false,
+      "diagnostics": "/Users/wangjiayu/Documents/C-Practice/2026-11-25/旧题备份/6-1_原字符串复制_被替换题目_对话版本.c:5:17: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]\n    5 |     while (*s2++=*s1++)\n      |            ~~~~~^~~~~~\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/旧题备份/6-1_原字符串复制_被替换题目_对话版本.c:5:17: note: place parentheses around the assignment to silence this warning\n    5 |     while (*s2++=*s1++)\n      |                 ^     \n      |            (          )\n/Users/wangjiayu/Documents/C-Practice/2026-11-25/旧题备份/6-1_原字符串复制_被替换题目_对话版本.c:5:17: note: use '==' to turn this assignment into an equality comparison\n    5 |     while (*s2++=*s1++)\n      |                 ^\n      |                 ==\n1 warning generated.\n"
+    }
+  ],
+  "runs": [
+    {
+      "file": "指针练习/7-6_求矩阵每行元素的和.c",
+      "input": "2 3\n1 2 3\n4 5 6\n",
+      "expected": "6\n15\n",
+      "actual": "6\n15\n",
+      "matches": true,
+      "known_failure": false
+    },
+    {
+      "file": "指针练习/7-11_使用函数实现字符串复制_对话版本.c",
+      "input": "3\nhappy new year\n7\nhappy\n1\nnew\n4\n",
+      "expected": "new year\nhappy\nerror input\n",
+      "actual": "new year\nhappy\nerror input\n",
+      "matches": true,
+      "known_failure": false
+    },
+    {
+      "file": "指针练习/7-12_使用函数删除字符串中的字符.c",
+      "input": "1\nbee\ne\n",
+      "expected": "result: b\n",
+      "actual": "result: b\n",
+      "matches": true,
+      "known_failure": false
+    },
+    {
+      "file": "指针练习/7-12_使用函数删除字符串中的字符.c",
+      "input": "2\nbee\ne\ncat\na\n",
+      "expected": "result: b\nresult: ct\n",
+      "actual": "result: b\nresult: \n",
+      "matches": false,
+      "known_failure": true
+    },
+    {
+      "file": "函数测试/6-1_菲波那切数列_循环_高.c",
+      "input": "",
+      "expected": "F8=21 F0=0 F1=1 large=1\n",
+      "actual": "F8=21 F0=0 F1=1 large=1\n",
+      "matches": true,
+      "known_failure": false
+    },
+    {
+      "file": "函数测试/6-2_使用函数统计指定数字的个数.c",
+      "input": "",
+      "expected": "3 1\n",
+      "actual": "3 1\n",
+      "matches": true,
+      "known_failure": false
+    },
+    {
+      "file": "函数测试/6-3_字符串连接.c",
+      "input": "",
+      "expected": "asderet\n",
+      "actual": "asderet\n",
+      "matches": true,
+      "known_failure": false
+    }
+  ],
+  "missing_original_problems": [
+    "7-7 指针与二维数组",
+    "7-10 指针做为函数参数（交换变量）"
+  ]
+}
