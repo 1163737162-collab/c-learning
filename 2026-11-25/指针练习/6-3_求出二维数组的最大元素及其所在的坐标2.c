@@ -28,4 +28,32 @@ PTA 原题：https://pintia.cn/problem-sets/2125421768680599552/exam/problems/ty
 max=97,row=3,col=2
 */
 
-// TODO：在这里自行完成函数。
+#include <stdio.h>
+
+#define N 5
+#define M 6
+
+// 只需补写下面这个函数。当前函数体是占位框架，还没有实现题目要求。
+// ===== 作答区开始：提交 PTA 时只复制此处的函数 =====
+int find(int array[N][M], int *Row, int *Col)
+{
+    // TODO：在这里完成函数。
+    return 0; // 占位返回值，请按题意修改。
+}
+// ===== 作答区结束 =====
+
+// 以下是按已保存题面编写的本地测试框架，补完上面的函数后可直接运行。
+int main(void)
+{
+    int array[N][M], row = 0, col = 0;
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < M; j++)
+            if (scanf("%d", &array[i][j]) != 1) return 0;
+    int maximum = find(array, &row, &col);
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) printf("%4d", array[i][j]);
+        printf("\n");
+    }
+    printf("max=%d,row=%d,col=%d\n", maximum, row, col);
+    return 0;
+}
