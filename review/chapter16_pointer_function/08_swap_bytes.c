@@ -15,23 +15,29 @@
 #include <stdio.h>
 
 void swap_bytes(void *left, void *right, size_t width);
-
+typedef int* p;
+typedef char* pp;
 int main(void)
 {
     int a = 4, b = 9;
     char x = 'A', y = 'B';
     // TODO：各调用一次 swap_bytes，再分别打印两组结果。
-    (void)a;
-    (void)b;
-    (void)x;
-    (void)y;
+    p pa = &a,pb = &b;
+    pp px = &x,py = &y;
+    swap_bytes(pa,pb,sizeof(int));
+    swap_bytes(px,py,sizeof(char));
+    printf("交换整数后: %d %d\n",a,b);
+    printf("交换字符后: %c %c\n",x,y);
     return 0;
 }
 
 void swap_bytes(void *left, void *right, size_t width)
 {
     // TODO：转换成字节指针，逐字节交换。
-    (void)left;
-    (void)right;
-    (void)width;
+    for(size_t i = 0;i < width;i++)
+    {
+        char temp = *((char*)left+i);
+        *((char*)left+i) =*((char*)right+i);
+        *((char*)right+i) = temp;
+    }
 }

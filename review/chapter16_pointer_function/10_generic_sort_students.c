@@ -16,21 +16,66 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct Student
+struct student
 {
     char name[16];
     int score;
 };
 
-void generic_sort(void *base, size_t count, size_t width,
-                  int (*compare)(const void *, const void *));
+void bubble_sort(void *base, size_t count, size_t size,
+                 int (*compare)(const void *, const void *));
+void swap_bytes(void*p1,void*p2,size_t size);
+int int_compare(const void* left,const void* right);
+int student_compare(const void*left,const void* right);
+
 
 int main(void)
 {
     int numbers[] = {3, 1, 2};
-    struct Student students[] = {{"Lin", 80}, {"Bo", 95}, {"An", 95}};
+    struct student students[] = {{"Lin", 80}, {"Bo", 95}, {"An", 95}};
     // TODO：引入第 9 题的实现和对应的比较函数，分别排序并核对。
-    (void)numbers;
-    (void)students;
+    bubble_sort(numbers,sizeof(numbers)/sizeof(numbers[0]),sizeof(numbers[0]),int_compare);
+    bubble_sort(students,sizeof(students)/sizeof(students[0]),sizeof(students[0]),student_compare);
+    printf("整数:");
+    for(int i = 0;i<3;i++)
+    printf("%d ",numbers[i]);
+    printf("\n");
+    printf("学生:");
+    for(int i = 0;i<3;i++)
+    printf("%s(%d) ",students[i].name,students[i].score);
     return 0;
+}
+void bubble_sort(void *base, size_t count, size_t size, int(compare)(const void *, const void *))
+{
+    if(count<2)
+    return;
+    for (size_t i = 0; i < count - 1; i++)
+    {
+        for (size_t j = 0; j < count - i - 1;j++)
+        {
+    
+            if(compare((char*)base+j*size,(char*)base+(j+1)*size)>0)
+            swap_bytes((char*)base+j*size,(char*)base+(j+1)*size,size);
+        }
+    }
+}
+int int_compare(const void* left,const void* right)
+{
+    return *(int *)left - *(int *)right;
+}
+int student_compare(const void*left,const void* right)
+{
+    if(((struct student*)right)->score==((struct student*)left)->score)
+    return strcmp(((struct student*)left)->name,((struct student*)right)->name);
+    else return ((struct student*)right)->score-((struct student*)left)->score;
+
+}
+void swap_bytes(void*p1,void*p2,size_t size)
+{
+    for(size_t i = 0;i<size;i++)
+    {
+        char temp = *((char*)p1+i);
+        *((char*)p1+i) = *((char*)p2+i);
+        *((char*)p2+i) = temp;
+    }
 }

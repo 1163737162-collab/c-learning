@@ -24,11 +24,36 @@ struct Student
 
 int compare_age(const void *left, const void *right);
 int compare_name(const void *left, const void *right);
+void print(const struct Student*p,size_t num,const char *pp);
 
 int main(void)
 {
-    struct Student students[] = {{"Lin", 18}, {"An", 21}, {"Bo", 18}};
+    struct Student s[] = {{"Lin", 18}, {"An", 21}, {"Bo", 18}};
     // TODO：写出两个比较函数，并排序打印两次。
-    (void)students;
+    size_t num = sizeof(s)/sizeof(s[0]);
+    qsort(s,num,sizeof(s[0]),compare_age);
+    print(s,num,"按年龄");
+    qsort(s,num,sizeof(s[0]),compare_name);
+    print(s,num,"按名字");
     return 0;
+}
+int compare_age(const void *left,const void *right)
+{
+    if(((struct Student*)left)->age-((struct Student*)right) ->age == 0)
+    return compare_name(left,right);
+    return (((struct Student*)left)->age-((struct Student*)right) ->age);
+}
+int compare_name(const void*left,const void*right)
+{
+    return (strcmp(left,right));
+}
+void print(const struct Student*p,size_t num,const char*pp)
+{
+    printf("%s:",pp);
+    for(size_t i = 0;i<num;i++)
+    {
+        printf("%s(%d) ",p->name,p->age);
+        p++;
+    }
+    printf("\n");
 }

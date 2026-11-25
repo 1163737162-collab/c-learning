@@ -20,15 +20,37 @@
 
 int compare_ascending(const void *left, const void *right);
 int compare_descending(const void *left, const void *right);
+void print(int *p,char*pp,size_t sz);
 
 int main(void)
 {
-    int values[] = {-3, 8, 0, -3, 5};
+    int values[] = {INT_MAX,INT_MIN};
     // TODO：实现两个比较函数，分别调用 qsort 并打印。
-    (void)values;
+    size_t num = sizeof(values)/sizeof(values[0]);
+    size_t size =sizeof(values[0]);
+    qsort(values,num,size,compare_ascending);
+    print(values,"升序",num);
+    // qsort(values,num,size,compare_descending);
+    // print(values,"降序",num);
     return 0;
 }
 int compare_ascending(const void*left,const void *right)
 {
-    return 
+    if(*(int *)left > *(int *)right)
+    return 1;
+    else if(*(int *)left < *(int *)right)
+    return -1;
+    else
+    return 0;
+}
+int compare_descending(const void*left,const void *right)
+{
+    return (*(int *)right - *(int *)left);
+}
+void print(int *p,char *pp,size_t sz)
+{
+    printf("%s:",pp);
+    for(int i = 0;i<sz;i++)
+    printf("%d ",p[i]);
+    printf("\n");
 }
